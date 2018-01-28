@@ -1,0 +1,15 @@
+﻿<div class="flex-row f-jc-sa">
+    <div class="flex-col f-ai-c">
+        <span>
+            {{controller.puppy.name}}
+        </span>
+        <img ng-src="{{controller.puppy.imageUrl}}"/>
+    </div>
+    <form class="flex-col f-jc-c">
+        <label ng-repeat="breed in controller.breeds">
+            <input type="radio" name="breed" ng-model="guessedBreed"/>
+            {{breed.name}}
+        </label>
+        <input type="submit" value="Guess!"/>
+    </form>
+</div>
